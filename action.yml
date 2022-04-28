@@ -1,0 +1,12 @@
+name: echo action
+description: echo whatever you say
+inputs:
+  say:
+    description: echo target
+    required: true
+    default: Hello World
+runs:
+  using: Docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.say }}
